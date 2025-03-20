@@ -1,0 +1,64 @@
+
+h1 {
+    color: #333;
+}
+
+table {
+    display: inline-block; 
+    margin-right: 40px; 
+    vertical-align: top; 
+}
+
+td {
+    padding-left: 20px; 
+}
+.disc-table td::before {
+    content: "•"; 
+    margin-right: 10px;
+}
+.square-table td::before {
+    content: "■";
+    margin-right: 10px;
+    color: #333; 
+}
+
+
+.circle-table td::before {
+    content: "○"; 
+    margin-right: 10px;
+    color: #333; 
+}
+
+
+.decimal-table td::before {
+    content: counter(row-number) "."; 
+    counter-increment: row-number; 
+    margin-right: 10px;
+}
+
+.decimal-table {
+    counter-reset: row-number;
+}
+
+.decimal-zero-table td::before {
+    content: counter(row-number-zero, decimal-leading-zero) "."; 
+    counter-increment: row-number-zero; 
+    margin-right: 10px;
+}
+
+
+.decimal-zero-table {
+    counter-reset: row-number-zero;
+}
+
+
+.lower-alpha-table td::before {
+    content: counter(row-alpha, lower-alpha) "."; 
+    counter-increment: row-alpha; 
+    margin-right: 10px;
+}
+
+
+.lower-alpha-table {
+    counter-reset: row-alpha;
+}
